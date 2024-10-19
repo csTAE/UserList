@@ -1,4 +1,3 @@
-// components/UserList.tsx
 import React from 'react';
 import UserCard from './UserCard';
 import { User } from '../models/User';

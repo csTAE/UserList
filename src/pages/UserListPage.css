@@ -1,32 +1,30 @@
-/* styles/pages/UserListPage.css */
-
 body {
-  background-color: #007bff; /* Blue background for the entire page */
-  font-family: Arial, sans-serif; /* Change font for better aesthetics */
-  margin: 0; /* Remove default margin */
-  padding: 20px; /* Padding around the body */
-  color: #333; /* Default text color */
+  background-color: #007bff; 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  padding: 20px; 
+  color: #333;
 }
 
 h1 {
-  text-align: center; /* Center align the title */
-  font-size: 2.5em; /* Increase font size */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-  margin-bottom: 30px; /* Space below title */
+  text-align: center;
+  font-size: 2.5em; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 30px; 
 }
 
 .user-list {
-  background-color: white; /* White background for user list */
-  border-radius: 8px; /* Rounded corners for user list */
-  padding: 20px; /* Padding for the list */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for user list */
+  background-color: white; 
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .user-card {
-  background-color: white; /* White background for each user card */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 15px; /* Padding for user cards */
-  margin-bottom: 15px; /* Space between user cards */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  background-color: white; 
+  border: 1px solid #ccc; 
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

@@ -1,4 +1,3 @@
-// hooks/useUsers.ts
 import { useState, useEffect } from 'react';
 import { fetchUsers } from '../utils/api';
 
@@ -38,7 +37,7 @@ export const useUsers = () => {
 
   const deleteUser = (username: string) => {
     setUsers(prevUsers => prevUsers.filter(user => user.username !== username));
-    alert(`${username} has been deleted successfully!`); // Show alert after deletion
+    alert(`${username} has been deleted successfully!`);
   };
   
 

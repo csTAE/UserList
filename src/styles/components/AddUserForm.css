@@ -1,44 +1,42 @@
-/* styles/components/AddUserForm.css */
-
 form {
-    background-color: rgb(255, 255, 255); /* White background for the form */
+    background-color: rgb(255, 255, 255); 
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect for the form */
-    margin: 20px auto; /* Center the form horizontally */
-    max-width: 400px; /* Set a max-width for the form */
-    width: 100%; /* Allow the form to be responsive */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    margin: 20px auto;
+    max-width: 400px; 
+    width: 100%; 
   }
   
   input {
-    margin-bottom: 10px; /* Space between input fields */
+    margin-bottom: 10px; 
     padding: 10px;
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-    width: 100%; /* Full width inputs */
-    box-sizing: border-box; /* Box sizing to include padding in width */
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    width: 100%; 
+    box-sizing: border-box;
   }
   
   label {
-    display: block; /* Block display for label */
-    margin-top: 10px; /* Space above label */
+    display: block;
+    margin-top: 10px; 
   }
   
   button {
-    background-color: #007bff; /* Primary button color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Button padding */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px; 
+    cursor: pointer; 
   }
   
   button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
   }
   
   .error-message {
-    color: red; /* Red color for error messages */
-    margin-bottom: 10px; /* Space below error message */
+    color: red; 
+    margin-bottom: 10px; 
   }
   

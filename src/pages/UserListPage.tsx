@@ -22,12 +22,12 @@ const UserListPage: React.FC = () => {
     deleteUser(username);
   };
 
-  const existingUsernames = users.map(user => user.username); // Collect existing usernames
+  const existingUsernames = users.map(user => user.username); 
 
   return (
     <div>
       <h1>User List</h1>
-      <AddUserForm onAddUser={addUser} existingUsernames={existingUsernames} /> {/* Pass existing usernames */}
+      <AddUserForm onAddUser={addUser} existingUsernames={existingUsernames} /> 
       <UserList users={users} onEditUser={handleEditUser} onDeleteUser={handleDeleteUser} />
     </div>
   );

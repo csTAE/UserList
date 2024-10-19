@@ -1,11 +1,10 @@
-// src/pages/EditUserPage.tsx
 import React from 'react';
 import { User } from '../models/User';
 import AddUserForm from '../components/AddUserForm';
 
 interface EditUserPageProps {
-  user: User; // User to be edited
-  onUpdateUser: (updatedUser: User) => void; // Function to handle updates
+  user: User; 
+  onUpdateUser: (updatedUser: User) => void;
 }
 
 const EditUserPage: React.FC<EditUserPageProps> = ({ user, onUpdateUser }) => {

@@ -25,17 +25,17 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target as HTMLInputElement | HTMLSelectElement; // Type assertion
+    const { name, value, type } = e.target as HTMLInputElement | HTMLSelectElement; 
     setNewUser(prevUser => ({
       ...prevUser,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value, // For checkbox
     }));
   
-    // Convert is_employed to boolean based on dropdown selection
+    
     if (name === 'is_employed') {
       setNewUser(prevUser => ({
         ...prevUser,
-        is_employed: value === 'yes', // Set boolean value based on dropdown
+        is_employed: value === 'yes',
       }));
     }
   };
@@ -45,9 +45,9 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
     onAddUser(newUser);
     window.alert('User Added: ' + newUser.first_name + ' ' + newUser.last_name);
 
-    
 
-    // Reset the form
+
+    
     setNewUser({
       first_name: '',
       last_name: '',
@@ -65,7 +65,6 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
       <input name="username" placeholder="Username" value={newUser.username} onChange={handleInputChange} />
       <input name="age" type="number" placeholder="Age" value={newUser.age} onChange={handleInputChange} />
 
-      {/* Dropdown for marital status */}
       <label>
         Marital Status:
         <select name="marital_status" value={newUser.marital_status} onChange={handleInputChange} required>
@@ -76,7 +75,6 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
         </select>
       </label>
 
-      {/* Dropdown for employment status */}
       <label>
         Is Employed:
         <select name="is_employed" value={newUser.is_employed ? 'yes' : 'no'} onChange={handleInputChange} required>

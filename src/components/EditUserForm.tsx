@@ -5,7 +5,7 @@ const EditUserForm = () => {
 
   const handleEditUser = (e: React.FormEvent) => {
     e.preventDefault();
-    // Logic for editing the user
+
     window.alert('User Edited');
   };
 

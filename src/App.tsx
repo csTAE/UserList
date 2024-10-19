@@ -1,4 +1,3 @@
-// App.tsx
 import React from 'react';
 import UserListPage from './pages/UserListPage';
 import './styles/App.css';

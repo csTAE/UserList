@@ -3,7 +3,6 @@ import React from 'react';
 const DeleteUserForm = () => {
   const handleDeleteUser = (e: React.FormEvent) => {
     e.preventDefault();
-    // Logic for deleting the user
     window.alert('User Deleted');
   };
 
