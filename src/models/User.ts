@@ -5,6 +5,7 @@ export interface User {
     age: number;
     marital_status: string;
     is_employed: boolean;
+    is_founder: boolean;
     
   }
   

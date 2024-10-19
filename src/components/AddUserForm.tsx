@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/components/AddUserForm.css';
+import { User } from '../models/User';
 
-interface User {
-  first_name: string;
-  last_name: string;
-  username: string;
-  age: number;
-  marital_status: string;
-  is_employed: boolean;
-}
 
 interface AddUserFormProps {
   onAddUser: (user: User) => void;
+  existingUsernames: string[];
 }
 
 const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
@@ -22,6 +16,7 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
     age: 0,
     marital_status: '',
     is_employed: false,
+    is_founder: false,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -55,6 +50,7 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
       age: 0,
       marital_status: '',
       is_employed: false,
+      is_founder: false,
     });
   };
 
@@ -78,6 +74,14 @@ const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
       <label>
         Is Employed:
         <select name="is_employed" value={newUser.is_employed ? 'yes' : 'no'} onChange={handleInputChange} required>
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+      </label>
+
+      <label>
+        Is Founder:
+        <select name="is_employed" value={newUser.is_founder ? 'yes' : 'no'} onChange={handleInputChange} required>
           <option value="no">No</option>
           <option value="yes">Yes</option>
         </select>
