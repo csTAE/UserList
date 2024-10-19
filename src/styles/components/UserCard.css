@@ -1,0 +1,18 @@
+/* components/UserCard.css */
+.user-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .user-card h3 {
+    margin: 0 0 8px;
+  }
+  .user-card p {
+    margin: 4px 0;
+  }
+  .user-card button {
+    margin-right: 8px;
+  }
+  
