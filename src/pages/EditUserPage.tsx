@@ -1,26 +1,27 @@
 import React from 'react';
+import EditUserForm from '../components/EditUserForm';
 import { User } from '../models/User';
-import AddUserForm from '../components/AddUserForm';
-import { useUsers } from '../hooks/useUsers';
+
 interface EditUserPageProps {
-  user: User; 
+  selectedUser: User | null;
   onUpdateUser: (updatedUser: User) => void;
+  onCancelEdit: () => void;
 }
 
-const EditUserPage: React.FC<EditUserPageProps> = ({ user, onUpdateUser }) => {
-  const { users } = useUsers(); 
-  const existingUsernames = users.map(existingUser => existingUser.username);
-  const handleUpdateUser = (updatedUser: User) => {
+const EditUserPage: React.FC<EditUserPageProps> = ({ selectedUser, onUpdateUser, onCancelEdit }) => {
+  if (!selectedUser) {
+    return <div>User not found!</div>;
+  }
+
+  const handleFormSubmit = (updatedUser: User) => {
     onUpdateUser(updatedUser);
+    window.alert(`User Updated: ${updatedUser.first_name} ${updatedUser.last_name}`);
   };
 
   return (
-    <div>
-      <h1>Edit User</h1>
-      <AddUserForm 
-        onAddUser={handleUpdateUser} 
-        existingUsernames={existingUsernames}
-      />
+    <div className="edit-user-page">
+      <h2>Edit User</h2>
+      <EditUserForm user={selectedUser} onSubmit={handleFormSubmit} onCancel={onCancelEdit} />
     </div>
   );
 };

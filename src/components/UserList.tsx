@@ -1,14 +1,10 @@
 import React from 'react';
-import UserCard from './UserCard';
 import { User } from '../models/User';
-import EditUserForm from './EditUserForm';
-
 
 interface UserListProps {
   users: User[];
   onEditUser: (username: string) => void;
   onDeleteUser: (username: string) => void;
-  
 }
 
 const UserList: React.FC<UserListProps> = ({ users, onEditUser, onDeleteUser }) => {
